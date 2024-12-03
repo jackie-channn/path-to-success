@@ -1,0 +1,140 @@
+/* -------------------- CSS BY NAME -------------------------------------- */
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai&family=Monoton&display=swap');
+
+/* -------------------- CSS RESET -------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------------------- ROOT VARIABLES -------------------------------------- */
+:root {
+    --primary-color: #880E4F;
+    --secondary-color: #F8BBD0;
+    --text-color: #333333;
+    --heading-font: 'Monoton', cursive;
+    --body-font: 'Arima Madurai', sans-serif;
+    --highlight-color: #0D47A1;
+}
+
+/* -------------------- GLOBAL STYLES (mobile first/small) -------------------- */
+body {
+    font-family: var(--body-font);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+header {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+section {
+    margin: 20px 0;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--highlight-color);
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media (min-width: 620px) {
+    body {
+        padding: 40px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+/*-------------------- MEDIA QUERY (large) --------------------------------*/
+@media (min-width: 950px) {
+    body {
+        max-width: 80%;
+    }
+
+    header {
+        padding: 30px;
+    }
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    article {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media (min-width: 1280px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    article {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+
+    .cta-button {
+        font-size: 1.25rem;
+        padding: 20px 40px;
+    }
+}
